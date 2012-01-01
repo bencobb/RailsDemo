@@ -1,0 +1,8 @@
+- if(should_show?(post))
+  %h3= post.title
+  %i #{author_first_last(post)} #{pretty_date(post.created_at)}
+  %hr
+  = link_to 'Show', post
+  = link_to 'Edit', edit_post_path(post)
+  = link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete
+

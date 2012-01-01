@@ -1,0 +1,21 @@
+<h1>Listing add_statuses</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @add_statuses.each do |add_status| %>
+  <tr>
+    <td><%= link_to 'Show', add_status %></td>
+    <td><%= link_to 'Edit', edit_add_status_path(add_status) %></td>
+    <td><%= link_to 'Destroy', add_status, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Add status', new_add_status_path %>
